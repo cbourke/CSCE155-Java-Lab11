@@ -1,6 +1,6 @@
 package unl.cse.rss;
 
-public class rss {
+public class Rss {
     
 	//TODO: define your object's state (fields
 	

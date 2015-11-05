@@ -10,10 +10,6 @@ public class StudentDemo {
         
         /* Instantiate another student here, and print the result */
         
-
-        
-        
-        
     } 
     
 } 
