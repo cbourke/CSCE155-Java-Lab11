@@ -2,7 +2,7 @@ package unl.cse.rss;
 
 public class Rss {
     
-	//TODO: define your object's state (fields
+	//TODO: define your object's state (fields)
 	
 	//TODO: define your object's constructors
 	
