@@ -1,7 +1,6 @@
-package unl.cse.student;
+package unl.soc;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -9,13 +8,11 @@ import java.time.temporal.ChronoUnit;
  */
 public class Student {
 
-    private static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-    
-    /* Member variables */
-    private String firstName;
-    private String lastName;
-    private Integer nuid;
-    private LocalDate dateOfBirth;
+    // Member variables
+    private final String firstName;
+    private final String lastName;
+    private final Integer nuid;
+    private final LocalDate dateOfBirth;
 
     /**
      * Constructor that requires users to provide all fields.
@@ -24,11 +21,11 @@ public class Student {
      * @param id
      * @param dob
      */
-    public Student(String firstName, String lastName, Integer id, String dateOfBirth) {
+    public Student(String firstName, String lastName, Integer nuid, LocalDate dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.nuid = id;        
-        this.dateOfBirth = LocalDate.parse(dateOfBirth, dateFormat);
+        this.nuid = nuid;        
+        this.dateOfBirth = dateOfBirth;
     }
     
     public String getFirstName(){        

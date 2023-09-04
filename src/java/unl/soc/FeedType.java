@@ -1,4 +1,4 @@
-package unl.cse.rss;
+package unl.soc;
 
 public enum FeedType {
 	RSS, ATOM;

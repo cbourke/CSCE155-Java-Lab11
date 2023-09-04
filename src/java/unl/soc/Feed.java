@@ -1,4 +1,4 @@
-package unl.cse.rss;
+package unl.soc;
 
 import java.time.format.DateTimeFormatter;
 
@@ -11,16 +11,18 @@ public class Feed {
 			FeedType.RSS, DateTimeFormatter.ofPattern("EEE, dd MMM yyyy HH:mm:ss Z"));
 	
 	/**
-	 * Husker sports news feed
+	 * University of Nebraska-Lincoln RSS news feed
 	 */
-	public static final Feed HUSKER_SPORTS = new Feed("http://www.huskers.com/rss.dbml?db_oem_id=100&media=news",
-			FeedType.RSS, DateTimeFormatter.ofPattern("EEE, dd MMM yyyy HH:mm:ss z"));
+	public static final Feed UNL = new Feed("https://events.unl.edu/upcoming/?format=rss", 
+			FeedType.RSS, 
+			DateTimeFormatter.ofPattern("EEE, dd MMM yyyy HH:mm:ss Z"));
 
 	/**
-	 * This is a proxy URL to avoid required usage of HTTPS and to avoid 429
-	 * errors It may not work if the proxy is down or has not been maintained
+	 * Pintrest RSS feed
 	 */
-	public static final Feed REDDIT = new Feed("http://cse.unl.edu/~cbourke/proxies/redditRSS.php", FeedType.ATOM, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssz"));
+	public static final Feed PINTREST = new Feed("https://newsroom.pinterest.com/en/feed/news.xml", 
+			FeedType.RSS, 
+			DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
 
 	public final String url;
 	public final FeedType type;
