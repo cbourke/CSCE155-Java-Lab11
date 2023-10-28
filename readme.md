@@ -194,9 +194,9 @@ support an RSS item's title, link, description, and publication date.
 
 3.  Design and implement the `Rss` class:
 
-    -   Define the class's state (its member variables)
+    -   Define the class's state (its member variables; hint: there should be 3 strings and one `LocalDateTime` instance)
 
-    -   Define the class's constructors
+    -   Define the class's constructor(s)
 
     -   Define the class's methods (getters and/or setters, `toString`,
         etc.) as necessary

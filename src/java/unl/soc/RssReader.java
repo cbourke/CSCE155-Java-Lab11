@@ -46,21 +46,21 @@ public class RssReader {
 
 				Element element = (Element) nodes.item(i);
 
-				String title = "", link = "", description = "", dateString = "";
-				LocalDateTime dateTime = null;
+				String title, link, description;
+				LocalDateTime publicationDate = null;
 
 				if (DEFAULT_FEED.type == FeedType.RSS) {
 					title = getElementValue(element, "title");
 					link = getElementValue(element, "link");
 					description = getElementValue(element, "description");
-					dateString = getElementValue(element, "pubDate");
-					dateTime = LocalDateTime.parse(dateString, DEFAULT_FEED.dateFormat);
+					String dateString = getElementValue(element, "pubDate");
+					publicationDate = LocalDateTime.parse(dateString, DEFAULT_FEED.dateFormat);
 				} else if (DEFAULT_FEED.type == FeedType.ATOM) {
 					title = getElementValue(element, "title");
 					link = getAttributeValue(element, "link", "href");
 					description = getElementValue(element, "content");
-					dateString = getElementValue(element, "updated");
-					dateTime = LocalDateTime.parse(dateString, DEFAULT_FEED.dateFormat);
+					String dateString = getElementValue(element, "updated");
+					publicationDate = LocalDateTime.parse(dateString, DEFAULT_FEED.dateFormat);
 				}
 
 				// TODO: instantiate/construct your RSS object using the values above
